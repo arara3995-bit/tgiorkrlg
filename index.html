@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roofline Rush</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="shell">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Urban Flow / Parkour Arcade</p>
+        <h1>Roofline Rush</h1>
+        <p class="summary">
+          Паркур-аркада про ночные крыши: держи ритм, перепрыгивай разрывы,
+          сбивай дронов рывком и собирай стиль, пока город под тобой горит.
+        </p>
+        <div class="hero-stats">
+          <article class="stat-card">
+            <span>Темп</span>
+            <strong>Jump + Dash</strong>
+            <p>Двойной прыжок, ускорение и живая скорость забега.</p>
+          </article>
+          <article class="stat-card">
+            <span>Режим</span>
+            <strong>Endless Rooftops</strong>
+            <p>Каждая новая крыша генерируется на лету, поэтому трасса не кончается.</p>
+          </article>
+        </div>
+      </div>
+
+      <aside class="info-card">
+        <p class="card-kicker">Контроль</p>
+        <h2>Играй сразу в браузере</h2>
+        <ul class="controls-list">
+          <li><span>Прыжок</span><strong>Space / W / ↑</strong></li>
+          <li><span>Рывок</span><strong>Shift / F</strong></li>
+          <li><span>Мобильно</span><strong>Кнопки снизу</strong></li>
+        </ul>
+        <p class="tip">
+          Рывок ломает преграды и дронов, а кристаллы восстанавливают энергию и
+          бустят стиль.
+        </p>
+      </aside>
+    </section>
+
+    <section class="game-section">
+      <div class="hud">
+        <article class="hud-chip">
+          <span>Дистанция</span>
+          <strong id="distance-value">0 м</strong>
+        </article>
+        <article class="hud-chip">
+          <span>Комбо</span>
+          <strong id="combo-value">x1</strong>
+        </article>
+        <article class="hud-chip">
+          <span>Скорость</span>
+          <strong id="speed-value">0</strong>
+        </article>
+        <article class="hud-chip">
+          <span>Рекорд</span>
+          <strong id="best-value">0</strong>
+        </article>
+      </div>
+
+      <div class="energy-card">
+        <div class="energy-copy">
+          <span>Энергия рывка</span>
+          <strong id="style-value">Style 0</strong>
+        </div>
+        <div class="energy-bar">
+          <div class="energy-fill" id="energy-fill"></div>
+        </div>
+      </div>
+
+      <div class="canvas-shell">
+        <canvas id="game" width="1280" height="720" aria-label="Паркур-игра"></canvas>
+
+        <div class="overlay" id="overlay">
+          <div class="overlay-panel">
+            <p class="card-kicker" id="overlay-kicker">Roofline Rush</p>
+            <h2 id="overlay-title">Включай забег</h2>
+            <p id="overlay-copy">
+              Перепрыгивай крыши, держи высокий ритм и набери лучший стиль по
+              ночному мегаполису.
+            </p>
+            <button class="primary-button" id="action-button" type="button">Старт</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mobile-controls">
+        <button class="mobile-button" data-action="jump" type="button">Прыжок</button>
+        <button class="mobile-button accent" data-action="dash" type="button">Рывок</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
